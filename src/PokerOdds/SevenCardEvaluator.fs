@@ -119,7 +119,6 @@
                         let key = face_flush.[i] + face_flush.[j] + face_flush.[k] + face_flush.[l] + face_flush.[m]
                         mFlushRankPtr.[key |> int] <- five_card_evaluator.GetRank(I, J, K, L, (m<<<2))
 
-
             let GetSuitCount(letterArray:int array, suits:int array , flush_index) = 
                 letterArray |> Array.fold(fun (acc:int) f ->
                         match (suits.[f] = suits.[flush_index]) with
@@ -134,8 +133,7 @@
                 | true ->
                     let local_flush_suit_index = flush_suit_index + 1
                     let local_suit_count = GetSuitCount( cardArray, suits, local_flush_suit_index)   
-                    let local_cards_matched_so_far =  cards_matched_so_far + (local_suit_count  |>int ) 
-                                         
+                    let local_cards_matched_so_far =  cards_matched_so_far + (local_suit_count  |>int )          
                     SetSuitsArray( cardArray, (local_cards_matched_so_far),(local_flush_suit_index), local_suit_count)
 
                 | false ->
@@ -183,7 +181,6 @@
                     | true -> mDeckcardsFlush.[f] + acc
                     | false -> acc
                 ) 0us
-                
 
             member this.GetRank(card1, card2, card3, card4, card5, card6, card7) = 
                 let key = 

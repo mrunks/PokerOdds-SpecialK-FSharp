@@ -177,7 +177,6 @@
                     SetUsualStraightFlushRanks
                 totalCount
 
-
             member this.GetRank(card_one, card_two, card_three, card_four, card_five) =
                 match card_one with 
                 | card_one when (mDeckcardsSuit.[card_one] = mDeckcardsSuit.[card_two] && 
@@ -198,7 +197,6 @@
                                  mDeckcardsFace.[card_four] + 
                                  mDeckcardsFace.[card_five]) |> int32];
 
-            
             member this.GetRankFromSeven(card_one, card_two, card_three, card_four, card_five, card_six, card_seven) =
                 let seven_cards : int array = [|card_one; card_two; card_three; card_four; card_five; card_six; card_seven|]
             
