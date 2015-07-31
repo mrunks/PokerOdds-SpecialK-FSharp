@@ -13,5 +13,5 @@ Example as done in Test.fs
     sevenEval.Initialize() 
     let rank = sevenEval.GetRank(0, 4, 8, 12, 16, 20, 24);
     
-    //Initialize Loads all of the necessary arrays
+    //Initialize Loads all of the necessary arrays for evaluating hands
     
